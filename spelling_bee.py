@@ -14,7 +14,7 @@ def find_words_with_letters(word_list, key_letter, other_letters):
 words = []  # List to store lines
 
 # Word list file
-file_path = "Spelling Be/words.txt"
+file_path = "./words.txt"
 
 # Open the file
 with open(file_path, 'r') as file:
@@ -23,9 +23,10 @@ with open(file_path, 'r') as file:
         clean_line = line.strip()
         words.append(clean_line)
 
+
 # User input
-key_letter = input("Enter the key letter that every word must contain: ")
-other_letters = input("Enter 6 other letters that words may or may not contain: ")
+key_letter = input("Enter the key letter that every word must contain: ").lower()
+other_letters = input("Enter 6 other letters that words may or may not contain: ").lower()
 
 #  Get result
 result = find_words_with_letters(words, key_letter, other_letters)
